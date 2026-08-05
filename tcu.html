@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVPD Portal - SWAT</title>
+    <title>OVPD Portal - TCU</title>
     <style>
         body {
             margin: 0;
@@ -25,9 +25,11 @@
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             font-weight: 600;
             font-size: 18px;
+            text-decoration: none;
+            color: inherit;
         }
         .nav-links {
             display: flex;
@@ -55,38 +57,76 @@
         }
         main {
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
             padding: 40px 20px;
-            text-align: center;
+            box-sizing: border-box;
             background-color: #0b0c10;
         }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #8c92a4;
+        }
+        .breadcrumb-container a {
+            color: #8c92a4;
+            text-decoration: none;
+        }
+        .breadcrumb-container a:hover {
+            color: #ffffff;
+        }
+        .division-header {
+            margin-bottom: 24px;
+        }
+        .division-title-area h1 {
+            font-size: 28px;
+            margin: 0 0 4px 0;
             font-weight: 700;
         }
-        .subtitle {
+        .division-title-area p {
             color: #8c92a4;
-            font-size: 14px;
-            margin-bottom: 40px;
+            font-size: 13px;
+            margin: 0;
         }
-        .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .doc-item {
             background-color: #12141c;
             border: 1px solid #1f2833;
-            color: #ffffff;
-            text-decoration: none;
             border-radius: 8px;
-            font-size: 14px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
             transition: border-color 0.2s;
         }
-        .back-btn:hover {
+        .doc-item:hover {
             border-color: #45a29e;
+        }
+        .doc-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .doc-rev {
+            font-size: 11px;
+            color: #8c92a4;
+            font-family: monospace;
+            letter-spacing: 0.5px;
         }
         footer {
             text-align: center;
@@ -117,27 +157,62 @@
 <body>
 
     <header>
-    <a href="index.html" class="nav-left" style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 18px; text-decoration: none; color: inherit;">
-        <span>🛡️</span> 
-        <span><span style="color: #45a29e;">OVPD</span> <span style="color: #8c92a4; font-weight: 400; margin-left: -2px;">Portal</span></span>
-    </a>
-    <div class="nav-links">
-        <a href="index.html" class="active">Handbooks</a>
-        <a href="#">HQ Decisions</a>
-        <a href="#">Roster ▾</a>
-    </div>
-    <div class="nav-right">
-        <span>🔍</span>
-        <span>🔔</span>
-        <span>👤</span>
-    </div>
-</header>
-    
+        <a href="index.html" class="nav-left">
+            <span>🛡️</span> 
+            <span><span style="color: #45a29e;">OVPD</span> <span style="color: #8c92a4; font-weight: 400; margin-left: -2px;">Portal</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Handbooks</a>
+            <a href="#">HQ Decisions</a>
+            <a href="#">Roster ▾</a>
+        </div>
+        <div class="nav-right">
+            <span>🔍</span>
+            <span>🔔</span>
+            <span>👤</span>
+        </div>
+    </header>
+
     <main>
-        <h1>SWAT Division</h1>
-        <div class="subtitle">Authorized operational assets and handbooks.</div>
-        <p style="color: #8c92a4;">Document list coming soon...</p>
-        <a href="index.html" class="back-btn">← Back to Archives</a>
+        <div class="breadcrumb-container">
+            <a href="index.html">← Back to Archives</a>
+            <span style="color: #333;">/</span>
+            <span style="color: #ffffff;">TCU</span>
+        </div>
+
+        <div class="division-header">
+            <div class="division-title-area">
+                <h1>TCU Division</h1>
+                <p>Training and compliance unit handbooks and guides.</p>
+            </div>
+        </div>
+
+        <div class="doc-list">
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Basic Training Guide
+                </div>
+                <div class="doc-rev">REV: 05.08.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Low Rank Training Guide
+                </div>
+                <div class="doc-rev">REV: 05.08.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Middle Rank Training Guide
+                </div>
+                <div class="doc-rev">REV: 05.08.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Ticket Training Guide
+                </div>
+                <div class="doc-rev">REV: 05.08.2026</div>
+            </a>
+        </div>
     </main>
 
     <footer>
