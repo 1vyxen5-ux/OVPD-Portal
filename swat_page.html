@@ -25,9 +25,11 @@
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             font-weight: 600;
             font-size: 18px;
+            text-decoration: none;
+            color: inherit;
         }
         .nav-links {
             display: flex;
@@ -80,6 +82,27 @@
         .breadcrumb-container a:hover {
             color: #ffffff;
         }
+        .division-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .division-badge {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+        .division-title-area h1 {
+            font-size: 28px;
+            margin: 0 0 4px 0;
+            font-weight: 700;
+        }
+        .division-title-area p {
+            color: #8c92a4;
+            font-size: 13px;
+            margin: 0;
+        }
         .orbat-banner {
             background-color: #12141c;
             border: 1px solid #1f2833;
@@ -92,7 +115,8 @@
             text-transform: uppercase;
             color: #45a29e;
             margin-bottom: 24px;
-            cursor: pointer;
+            display: block;
+            text-decoration: none;
             transition: border-color 0.2s;
         }
         .orbat-banner:hover {
@@ -160,22 +184,22 @@
 <body>
 
     <header>
-    <a href="index.html" class="nav-left" style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 18px; text-decoration: none; color: inherit;">
-        <span>🛡️</span> 
-        <span><span style="color: #45a29e;">OVPD</span> <span style="color: #8c92a4; font-weight: 400; margin-left: -2px;">Portal</span></span>
-    </a>
-    <div class="nav-links">
-        <a href="index.html" class="active">Handbooks</a>
-        <a href="#">HQ Decisions</a>
-        <a href="#">Roster ▾</a>
-    </div>
-    <div class="nav-right">
-        <span>🔍</span>
-        <span>🔔</span>
-        <span>👤</span>
-    </div>
-</header>
-    
+        <a href="index.html" class="nav-left">
+            <span>🛡️</span> 
+            <span><span style="color: #45a29e;">OVPD</span> <span style="color: #8c92a4; font-weight: 400; margin-left: -2px;">Portal</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Handbooks</a>
+            <a href="#">HQ Decisions</a>
+            <a href="#">Roster ▾</a>
+        </div>
+        <div class="nav-right">
+            <span>🔍</span>
+            <span>🔔</span>
+            <span>👤</span>
+        </div>
+    </header>
+
     <main>
         <div class="breadcrumb-container">
             <a href="index.html">← Back to Archives</a>
@@ -183,9 +207,17 @@
             <span style="color: #ffffff;">SWAT</span>
         </div>
 
-        <div class="orbat-banner">
-            📊 Divisional Orbat - Officer Database for SWAT
+        <div class="division-header">
+            <img src="swat-badge.png" alt="SWAT Badge" class="division-badge">
+            <div class="division-title-area">
+                <h1>SWAT Division</h1>
+                <p>Authorized operational assets and handbooks.</p>
+            </div>
         </div>
+
+        <a href="https://docs.google.com/spreadsheets/d/11DsGYWEgMz3DdxXxrQQKaYU1KCmrMJ0mCUFgNjef-bA/edit?usp=sharing" target="_blank" class="orbat-banner">
+            📊 Divisional Orbat - Officer Database for SWAT
+        </a>
 
         <div class="doc-list">
             <a href="#" class="doc-item">
