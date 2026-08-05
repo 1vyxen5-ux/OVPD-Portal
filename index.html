@@ -57,53 +57,67 @@
         }
         main {
             flex: 1;
-            max-width: 900px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
             box-sizing: border-box;
-            background-color: #0b0c10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .page-title {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             letter-spacing: 0.5px;
+        }
+        .page-subtitle {
+            color: #8c92a4;
+            font-size: 14px;
+            margin-bottom: 40px;
         }
         .division-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            width: 100%;
+            max-width: 800px;
         }
         .division-card {
             background-color: #12141c;
             border: 1px solid #1f2833;
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 40px 20px;
             text-decoration: none;
             color: #ffffff;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             transition: border-color 0.2s, transform 0.2s;
         }
         .division-card:hover {
             border-color: #45a29e;
             transform: translateY(-2px);
         }
-        .division-info h3 {
-            margin: 0 0 4px 0;
-            font-size: 16px;
-            font-weight: 600;
+        .card-badge {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 16px;
+            object-fit: contain;
+            opacity: 0.85;
         }
-        .division-info p {
-            margin: 0;
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .card-count {
             font-size: 12px;
             color: #8c92a4;
-        }
-        .division-arrow {
-            color: #8c92a4;
-            font-size: 16px;
         }
         footer {
             text-align: center;
@@ -151,36 +165,25 @@
     </header>
 
     <main>
-        <div class="page-title">Archives</div>
+        <div class="page-title">OVPD Archives</div>
+        <div class="page-subtitle">Select a division to view authorized operational assets.</div>
 
         <div class="division-grid">
             <a href="general.html" class="division-card">
-                <div class="division-info">
-                    <h3>General</h3>
-                    <p>Department-wide guides and quotas</p>
-                </div>
-                <div class="division-arrow">➔</div>
+                <div class="card-title">GENERAL</div>
+                <div class="card-count">Department Guides Available</div>
             </a>
             <a href="swat_page.html" class="division-card">
-                <div class="division-info">
-                    <h3>SWAT</h3>
-                    <p>Tactical operations and breaching</p>
-                </div>
-                <div class="division-arrow">➔</div>
+                <div class="card-title">SWAT</div>
+                <div class="card-count">Tactical Operations Available</div>
             </a>
             <a href="tcu_page.html" class="division-card">
-                <div class="division-info">
-                    <h3>TCU</h3>
-                    <p>Training and compliance guides</p>
-                </div>
-                <div class="division-arrow">➔</div>
+                <div class="card-title">TCU</div>
+                <div class="card-count">Training Guides Available</div>
             </a>
             <a href="vou_page.html" class="division-card">
-                <div class="division-info">
-                    <h3>VOU</h3>
-                    <p>Vehicle operations unit resources</p>
-                </div>
-                <div class="division-arrow">➔</div>
+                <div class="card-title">VOU & ADU</div>
+                <div class="card-count">Vehicle & Administrative Resources</div>
             </a>
         </div>
     </main>
