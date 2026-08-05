@@ -55,38 +55,81 @@
         }
         main {
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
             padding: 40px 20px;
-            text-align: center;
+            box-sizing: border-box;
             background-color: #0b0c10;
         }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .subtitle {
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             color: #8c92a4;
-            font-size: 14px;
-            margin-bottom: 40px;
         }
-        .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+        .breadcrumb-container a {
+            color: #8c92a4;
+            text-decoration: none;
+        }
+        .breadcrumb-container a:hover {
+            color: #ffffff;
+        }
+        .orbat-banner {
             background-color: #12141c;
             border: 1px solid #1f2833;
-            color: #ffffff;
-            text-decoration: none;
             border-radius: 8px;
-            font-size: 14px;
+            padding: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #45a29e;
+            margin-bottom: 24px;
+            cursor: pointer;
             transition: border-color 0.2s;
         }
-        .back-btn:hover {
+        .orbat-banner:hover {
             border-color: #45a29e;
+        }
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .doc-item {
+            background-color: #12141c;
+            border: 1px solid #1f2833;
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            transition: border-color 0.2s;
+        }
+        .doc-item:hover {
+            border-color: #45a29e;
+        }
+        .doc-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .doc-rev {
+            font-size: 11px;
+            color: #8c92a4;
+            font-family: monospace;
+            letter-spacing: 0.5px;
         }
         footer {
             text-align: center;
@@ -133,10 +176,42 @@
     </header>
 
     <main>
-        <h1>SWAT Division</h1>
-        <div class="subtitle">Authorized operational assets and handbooks.</div>
-        <p style="color: #8c92a4;">Document list coming soon...</p>
-        <a href="index.html" class="back-btn">← Back to Archives</a>
+        <div class="breadcrumb-container">
+            <a href="index.html">← Back to Archives</a>
+            <span style="color: #333;">/</span>
+            <span style="color: #ffffff;">SWAT</span>
+        </div>
+
+        <div class="orbat-banner">
+            📊 Divisional Orbat - Officer Database for SWAT
+        </div>
+
+        <div class="doc-list">
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Staff Breach Guide V2
+                </div>
+                <div class="doc-rev">REV: 23.07.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - SWAT Handbook V2
+                </div>
+                <div class="doc-rev">REV: 23.07.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - SWAT Recruitment Guide V2
+                </div>
+                <div class="doc-rev">REV: 05.07.2026</div>
+            </a>
+            <a href="#" class="doc-item">
+                <div class="doc-title">
+                    <span>📄</span> OVPD - Public Breaching Guide V2
+                </div>
+                <div class="doc-rev">REV: 14.05.2026</div>
+            </a>
+        </div>
     </main>
 
     <footer>
