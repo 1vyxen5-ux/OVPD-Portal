@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVPD Portal - General</title>
+    <title>OVPD Portal - Police Headquarters</title>
     <style>
         body {
             margin: 0;
@@ -82,6 +82,19 @@
         .breadcrumb-container a:hover {
             color: #ffffff;
         }
+        .division-header {
+            margin-bottom: 24px;
+        }
+        .division-title-area h1 {
+            font-size: 28px;
+            margin: 0 0 4px 0;
+            font-weight: 700;
+        }
+        .division-title-area p {
+            color: #8c92a4;
+            font-size: 13px;
+            margin: 0;
+        }
         .orbat-banner {
             background-color: #12141c;
             border: 1px solid #1f2833;
@@ -94,7 +107,8 @@
             text-transform: uppercase;
             color: #45a29e;
             margin-bottom: 24px;
-            cursor: pointer;
+            display: block;
+            text-decoration: none;
             transition: border-color 0.2s;
         }
         .orbat-banner:hover {
@@ -182,12 +196,19 @@
         <div class="breadcrumb-container">
             <a href="index.html">← Back to Archives</a>
             <span style="color: #333;">/</span>
-            <span style="color: #ffffff;">GENERAL</span>
+            <span style="color: #ffffff;">Police Headquarters</span>
         </div>
 
-        <div class="orbat-banner">
-            📊 POLICE HQ ORBAT
+        <div class="division-header">
+            <div class="division-title-area">
+                <h1>Police Headquarters</h1>
+                <p>HQ directives, organizational databases, and administration assets.</p>
+            </div>
         </div>
+
+        <a href="https://docs.google.com/spreadsheets/d/1sTw4HFvKWx15ADE9_YzN2fPbJRLy1T62GW7Hcy9MBMM/edit?usp=sharing" target="_blank" class="orbat-banner">
+            📊 Police HQ ORBAT
+        </a>
 
         <div class="doc-list">
             <a href="#" class="doc-item">
