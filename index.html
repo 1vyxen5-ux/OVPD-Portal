@@ -19,7 +19,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            background-color: #12141c; /* Lighter grey above the header line */
+            background-color: #12141c;
             border-bottom: 1px solid #222736;
         }
         .nav-left {
@@ -61,7 +61,7 @@
             justify-content: center;
             padding: 40px 20px;
             text-align: center;
-            background-color: #0b0c10; /* Pure dark center */
+            background-color: #0b0c10;
         }
         h1 {
             font-size: 36px;
@@ -80,17 +80,21 @@
             max-width: 800px;
             width: 100%;
         }
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
         .card {
             background-color: #12141c;
             border: 1px solid #1f2833;
             border-radius: 12px;
             padding: 40px 30px;
             text-align: center;
-            transition: border-color 0.2s;
-            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
         }
         .card:hover {
             border-color: #45a29e;
+            transform: translateY(-2px);
         }
         .card h3 {
             font-size: 24px;
@@ -108,7 +112,7 @@
             padding: 30px;
             font-size: 11px;
             color: #666c7d;
-            background-color: #12141c; /* Lighter grey below the footer line */
+            background-color: #12141c;
             border-top: 1px solid #222736;
             line-height: 1.8;
             letter-spacing: 0.5px;
@@ -136,7 +140,7 @@
             <span>🛡️</span> OVPD <span style="color: #8c92a4; font-weight: 400;">Portal</span>
         </div>
         <div class="nav-links">
-            <a href="#" class="active">Handbooks</a>
+            <a href="index.html" class="active">Handbooks</a>
             <a href="#">HQ Decisions</a>
             <a href="#">Roster ▾</a>
         </div>
@@ -152,22 +156,30 @@
         <div class="subtitle">Select a division to view authorized operational assets.</div>
         
         <div class="cards-container">
-            <div class="card">
-                <h3>SWAT</h3>
-                <p>4 Handbooks Available</p>
-            </div>
-            <div class="card">
-                <h3>GENERAL</h3>
-                <p>3 Handbooks Available</p>
-            </div>
-            <div class="card">
-                <h3>TCU</h3>
-                <p>2 Handbooks Available</p>
-            </div>
-            <div class="card">
-                <h3>ADU</h3>
-                <p>2 Handbooks Available</p>
-            </div>
+            <a href="swat.html" class="card-link">
+                <div class="card">
+                    <h3>SWAT</h3>
+                    <p>4 Handbooks Available</p>
+                </div>
+            </a>
+            <a href="general.html" class="card-link">
+                <div class="card">
+                    <h3>GENERAL</h3>
+                    <p>3 Handbooks Available</p>
+                </div>
+            </a>
+            <a href="tcu.html" class="card-link">
+                <div class="card">
+                    <h3>TCU</h3>
+                    <p>2 Handbooks Available</p>
+                </div>
+            </a>
+            <a href="adu.html" class="card-link">
+                <div class="card">
+                    <h3>ADU</h3>
+                    <p>2 Handbooks Available</p>
+                </div>
+            </a>
         </div>
     </main>
 
